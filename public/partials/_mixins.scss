@@ -1,0 +1,21 @@
+@mixin button {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.7rem;
+    color: $blue;
+    border: $border;
+    border-radius: 5rem;
+    cursor: pointer;
+    background: none;
+    &:hover {
+        background: $blue;
+        color: $black;
+    }
+}
+
+@mixin grid($val) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+    gap: 1.5rem;
+}

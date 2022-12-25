@@ -1,0 +1,86 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: $white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 9%;
+    .navbar a {
+        font-size: 1.7rem;
+        color: $black;
+        display: inline-block;
+        margin: 0 1rem;
+        &:hover {
+            color: $blue;
+        }
+    }
+    .btn {
+        margin-top: 0;
+    }
+}
+
+.logo {
+    font-size: 2.5rem;
+    color: $black;
+    font-weight: bolder;
+    i {
+        color: $blue;
+        padding: .5rem;
+    }
+}
+
+#menu-btn {
+    font-size: 2.5rem;
+    color: $black;
+    cursor: pointer;
+    display: none;
+}
+
+
+/*========== MEDIA QUERIES ==========*/
+
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+    .header {
+        padding: 1.5rem 2rem;
+    }
+    section {
+        padding: 3rem 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-btn {
+        display: inline-block;
+    }
+    .header {
+        .navbar {
+            position: absolute;
+            top: 99%;
+            left: 0;
+            right: 0;
+            background: $bg-color;
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            &:active {
+                clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%);
+            }
+            a {
+                margin: 2rem;
+                font-size: 2rem;
+                display: block;
+            }
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+}

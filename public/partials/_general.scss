@@ -1,0 +1,41 @@
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 9rem;
+    &::-webkit-scrollbar {
+        width: 1rem;
+    }
+    &::-webkit-scrollbar-track {
+        background: $black;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: $blue;
+    }
+}
+
+body {
+    background: #F0EFED;
+    overflow: hidden;
+}
+
+.btn {
+    @include button;
+}
+
+section {
+    padding: 3rem 9%;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 2rem;
+    span {
+        color: $blue;
+        font-size: 2rem;
+    }
+    h1 {
+        font-size: 4rem;
+        color: $black;
+    }
+}
