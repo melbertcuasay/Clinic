@@ -9,6 +9,7 @@
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
+  
 
 
   <!-- Navbar -->
@@ -50,6 +51,26 @@
                             <th>Occupation</th>
                         </tr>
                     </thead>
+
+                    @foreach($details as $details)
+                    <tbody>
+                        <tr>
+                            <td><a href="{{ url('patientrecords', $details->id) }}" class="btn btn-info">{{ $details->case_no }}</a></td>
+                            <td>{{ $details->last_name }}</td>
+                            <td>{{ $details->middle_initial }}</td>
+                            <td>{{ $details->first_name }}</td>
+                            <td>{{ $details->address }}</td>
+                            <td>{{ $details->age }}</td>
+                            <td>{{ $details->birthday }}</td>
+                            <td>{{ $details->birth_place }}</td>
+                            <td>{{ $details->civil_status }}</td>
+                            <td>{{ $details->gender }}</td>
+                            <td>{{ $details->phone }}</td>
+                            <td>{{ $details->religion }}</td>
+                            <td>{{ $details->occupation }}</td>
+                        </tr>
+                    </tbody>
+                    @endforeach
 
                     </table>
                 </div>

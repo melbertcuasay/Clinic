@@ -31,6 +31,11 @@ Route::post('sendemail/{id}',[App\Http\Controllers\User\AppointmentController::c
 // patient record route
 Route::get('patientdetails', [App\Http\Controllers\Admin\PatientController::class, 'patientdetails']);
 Route::get('addpatientdetails', [App\Http\Controllers\Admin\PatientController::class, 'addpatientdetails']);
+Route::post('savepatientdetails', [App\Http\Controllers\Admin\PatientController::class, 'savepatientdetails']);
+Route::get('patientrecords/{id}', [App\Http\Controllers\Admin\PatientController::class, 'patientrecords']);
+Route::get('medicalrecords', [App\Http\Controllers\Admin\PatientController::class, 'medicalrecords']);
+Route::get('addmedicalrecords', [App\Http\Controllers\Admin\PatientController::class, 'addmedicalrecords']);
+Route::post('savemedicalrecords', [App\Http\Controllers\Admin\PatientController::class, 'savemedicalrecords']);
 
 Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified'])->group(function () {
     

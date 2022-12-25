@@ -9,6 +9,7 @@
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
+@include('sweetalert::alert')
 
 
   <!-- Navbar -->
@@ -22,7 +23,8 @@
 
     <div class="container">
         <div class="card">
-            <form action="">
+            <form action="{{ url('savepatientdetails') }}" method="POST">
+                @csrf
            
             <div class="card-header px-5 py-4 border-0 bg-light" style="font-weight: bold; text-transform:uppercase; font-size: 30px;">
                 <h4 class="fw-bold mb-0">Add Patient Record
