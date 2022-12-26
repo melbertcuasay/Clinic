@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\User\HomeController;
 use App\Http\Controllers\Admin\PatientController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\User\AppointmentController;
 
 /*
@@ -36,6 +37,15 @@ Route::get('patientrecords/{id}', [App\Http\Controllers\Admin\PatientController:
 Route::get('medicalrecords', [App\Http\Controllers\Admin\PatientController::class, 'medicalrecords']);
 Route::get('addmedicalrecords', [App\Http\Controllers\Admin\PatientController::class, 'addmedicalrecords']);
 Route::post('savemedicalrecords', [App\Http\Controllers\Admin\PatientController::class, 'savemedicalrecords']);
+
+// product route
+Route::get('products', [App\Http\Controllers\Admin\ProductController::class, 'products']);
+Route::get('addproducts', [App\Http\Controllers\Admin\ProductController::class, 'addproducts']);
+Route::post('saveproducts', [App\Http\Controllers\Admin\ProductController::class, 'saveproducts']);
+Route::get('updateproducts/{id}', [App\Http\Controllers\Admin\ProductController::class, 'updateproducts']);
+Route::post('editproducts/{id}', [App\Http\Controllers\Admin\ProductController::class, 'editproducts']);
+Route::get('deleteproducts/{id}', [App\Http\Controllers\Admin\ProductController::class, 'deleteproducts']);
+
 
 Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified'])->group(function () {
     

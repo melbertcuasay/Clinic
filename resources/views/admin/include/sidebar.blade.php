@@ -45,6 +45,8 @@
             </a>
           </li>
 
+         
+
         
 
           <li class="nav-item">
@@ -69,6 +71,19 @@
                   <p>Medical Records</p>
                 </a>
               </li>
+            </ul>
+
+         
+              <li class="nav-item">
+            <a href="{{ url('products') }}" class="nav-link">
+            <i class="nav-icon fas fa-cart-plus" aria-hidden="true"></i>
+              <p>
+                Products
+              </p>
+            </a>
+          </li>
+
+            
             
      
 

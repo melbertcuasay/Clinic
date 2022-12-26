@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Models\Appointments;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 
@@ -29,7 +30,9 @@ class DashboardController extends Controller
                 else {
                     $statusbook = '4';
                 }
-                return view ('user.homepage', compact('statusbook'));
+
+                $products = DB::table('products')->get();
+                return view ('user.homepage', compact('statusbook', 'products'));
             }
             else
             {
