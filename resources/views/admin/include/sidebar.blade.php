@@ -73,15 +73,31 @@
               </li>
             </ul>
 
-         
-              <li class="nav-item">
-            <a href="{{ url('products') }}" class="nav-link">
-            <i class="nav-icon fas fa-cart-plus" aria-hidden="true"></i>
+            <li class="nav-item">
+            <a href="#" class="nav-link">
+            <i class="fa fa-user-md" aria-hidden="true"></i>
               <p>
-                Products
+              Products & Procedures
+                <i class="fas fa-angle-left right"></i>
+                <span class="badge badge-info right"></span>
               </p>
             </a>
-          </li>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ url('products') }}" class="nav-link">
+                <i class="nav-icon fas fa-cart-plus" aria-hidden="true"></i>
+                  <p>Products</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ url('procedures') }}" class="nav-link">
+                <i class="fa fa-heart" aria-hidden="true"></i>
+                  <p>Procedures</p>
+                </a>
+              </li>
+            </ul>
+
+         
 
             
             

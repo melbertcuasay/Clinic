@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\User\HomeController;
 use App\Http\Controllers\Admin\PatientController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\ProceduresController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\User\AppointmentController;
 
@@ -45,6 +46,11 @@ Route::post('saveproducts', [App\Http\Controllers\Admin\ProductController::class
 Route::get('updateproducts/{id}', [App\Http\Controllers\Admin\ProductController::class, 'updateproducts']);
 Route::post('editproducts/{id}', [App\Http\Controllers\Admin\ProductController::class, 'editproducts']);
 Route::get('deleteproducts/{id}', [App\Http\Controllers\Admin\ProductController::class, 'deleteproducts']);
+
+// procedures route
+Route::get('procedures',[App\Http\Controllers\Admin\ProceduresController::class, 'procedures']);
+Route::get('addprocedures',[App\Http\Controllers\Admin\ProceduresController::class, 'addprocedures']);
+Route::post('saveprocedures',[App\Http\Controllers\Admin\ProceduresController::class, 'saveprocedures']);
 
 
 Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified'])->group(function () {
