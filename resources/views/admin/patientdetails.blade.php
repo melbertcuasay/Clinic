@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CLINIOX | DASHBOARD</title>
 
+  <link rel="stylesheet" href="//cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
+
  @include('admin.include.css')
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -32,7 +34,7 @@
                 <br>
 
                 <div class="table-responsive">
-                    <table class="table table-bordered table-striped">
+                    <table id="myDataTable" class="table table-bordered table-striped">
 
                     <thead>
                         <tr>
@@ -82,6 +84,13 @@
 
 
 @include('admin.include.script')
+
+<script src="//cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+<script>
+    $(document).ready( function () {
+    $('#myDataTable').DataTable();
+    } );
+</script>
 
 </body>
 </html>

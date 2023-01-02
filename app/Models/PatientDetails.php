@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class PatientDetails extends Model
 {
@@ -27,4 +28,6 @@ class PatientDetails extends Model
         'religion',
         'occupation',
     ];
+
+  
 }

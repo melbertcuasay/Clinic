@@ -20,7 +20,8 @@ class PatientController extends Controller
 
     public function addpatientdetails()
     {
-        return view ('admin.addpatientdetails');
+        $details = DB::table('patient_details')->get();
+        return view ('admin.addpatientdetails',compact('details'));
     }
 
     public function savepatientdetails(Request $request)
@@ -46,6 +47,7 @@ class PatientController extends Controller
         $details = new PatientDetails;
 
         $details->case_no = $case_no;
+        $details->patient_id = $request['patient_id'];
         $details->last_name = $request['last_name'];
         $details->middle_initial = $request['middle_initial'];
         $details->first_name = $request['first_name'];
@@ -79,7 +81,9 @@ class PatientController extends Controller
 
     public function addmedicalrecords()
     {
-        return view ('admin.addmedicalrecords');
+        
+        $records = DB::table('medical_records')->get();
+        return view ('admin.addmedicalrecords', compact('records'));
     }
 
     public function savemedicalrecords(Request $request)
@@ -102,6 +106,7 @@ class PatientController extends Controller
 
         $records = new MedicalRecords;
 
+        $records->patient_id = $request['patient_id'];
         $records->patient_history = $request['patient_history'];
         $records->findings = $request['findings'];
         $records->weight = $request['weight'];

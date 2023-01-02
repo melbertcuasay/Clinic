@@ -2,9 +2,10 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Appointments extends Model
 {
@@ -16,6 +17,7 @@ class Appointments extends Model
 
     protected $fillable = [
 
+        'patient_id',
         'last_name',
         'first_name',
         'email',
@@ -26,4 +28,6 @@ class Appointments extends Model
         'status',
         'user_id',
     ];
+
+  
 }

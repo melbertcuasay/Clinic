@@ -25,6 +25,10 @@
         <div class="card">
             <form action="{{ url('savemedicalrecords') }}" method="POST">
                 @csrf
+
+                @foreach($records as $records)
+                    <input type="hidden" name="patient_id" value="{{ $records->id}}" class="form-control">
+                    @endforeach
            
             <div class="card-header px-5 py-4 border-0 bg-light" style="font-weight: bold; text-transform:uppercase; font-size: 30px;">
                 <h4 class="fw-bold mb-0">Add Medical Records

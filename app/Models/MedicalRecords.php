@@ -2,8 +2,10 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+
+
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class MedicalRecords extends Model
 {
@@ -13,6 +15,7 @@ class MedicalRecords extends Model
 
     protected $fillable = [
 
+        'patient_id',
         'patient_history',
         'findings',
         'weight',
@@ -26,4 +29,6 @@ class MedicalRecords extends Model
         'patient_progress',
         'total_payment',
     ];
+
+   
 }

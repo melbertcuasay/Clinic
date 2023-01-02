@@ -3,9 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\User\HomeController;
 use App\Http\Controllers\Admin\PatientController;
+use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Admin\ReportsController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\ProceduresController;
-use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\User\AppointmentController;
 
 /*
@@ -51,6 +52,13 @@ Route::get('deleteproducts/{id}', [App\Http\Controllers\Admin\ProductController:
 Route::get('procedures',[App\Http\Controllers\Admin\ProceduresController::class, 'procedures']);
 Route::get('addprocedures',[App\Http\Controllers\Admin\ProceduresController::class, 'addprocedures']);
 Route::post('saveprocedures',[App\Http\Controllers\Admin\ProceduresController::class, 'saveprocedures']);
+
+// report route
+Route::get('reports', [App\Http\Controllers\Admin\ReportsController::class, 'reports']);
+Route::get('viewreports/{patient_id}', [App\Http\Controllers\Admin\ReportsController::class, 'viewreports']);
+Route::get('invoice/{patient_id}',[App\Http\Controllers\Admin\ReportsController::class, 'viewInvoice']);
+Route::get('invoice/{patient_id}/generate', [App\Http\Controllers\Admin\ReportsController::class, 'generateInvoice']);
+
 
 
 Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified'])->group(function () {
