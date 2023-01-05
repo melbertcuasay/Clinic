@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\PatientController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\ReportsController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\InventoryController;
 use App\Http\Controllers\Admin\ProceduresController;
 use App\Http\Controllers\User\AppointmentController;
 
@@ -58,6 +59,14 @@ Route::get('reports', [App\Http\Controllers\Admin\ReportsController::class, 'rep
 Route::get('viewreports/{patient_id}', [App\Http\Controllers\Admin\ReportsController::class, 'viewreports']);
 Route::get('invoice/{patient_id}',[App\Http\Controllers\Admin\ReportsController::class, 'viewInvoice']);
 Route::get('invoice/{patient_id}/generate', [App\Http\Controllers\Admin\ReportsController::class, 'generateInvoice']);
+
+// inventory route
+Route::get('inventory', [App\Http\Controllers\Admin\InventoryController::class, 'inventory']);
+Route::get('stocks', [App\Http\Controllers\Admin\InventoryController::class, 'stocks']);
+Route::post('savestocks', [App\Http\Controllers\Admin\InventoryController::class, 'savestocks']);
+Route::get('updatestocks/{id}', [App\Http\Controllers\Admin\InventoryController::class, 'updatestocks']);
+Route::post('editstocks/{id}', [App\Http\Controllers\Admin\InventoryController::class, 'editstocks']);
+
 
 
 

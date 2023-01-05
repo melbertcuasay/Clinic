@@ -35,6 +35,15 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
        
+
+               <li class="nav-item">
+            <a href="{{ url('reports') }}" class="nav-link">
+            <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Dashboard
+              </p>
+            </a>
+          </li>
          
           <li class="nav-item">
             <a href="{{ url('bookappointment') }}" class="nav-link">
@@ -75,9 +84,10 @@
 
             <li class="nav-item">
             <a href="#" class="nav-link">
-            <i class="fa fa-user-md" aria-hidden="true"></i>
+            <i class="nav-icon far fa-plus-square"></i>
+            <span class="badge badge-info right">2</span>
               <p>
-              Products & Procedures
+              Products-Procedures
                 <i class="fas fa-angle-left right"></i>
                 <span class="badge badge-info right"></span>
               </p>
@@ -85,21 +95,30 @@
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="{{ url('products') }}" class="nav-link">
-                <i class="nav-icon fas fa-cart-plus" aria-hidden="true"></i>
+                <i class="far fa-circle nav-icon"></i>
                   <p>Products</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="{{ url('procedures') }}" class="nav-link">
-                <i class="fa fa-heart" aria-hidden="true"></i>
+                <i class="far fa-circle nav-icon"></i>
                   <p>Procedures</p>
                 </a>
               </li>
             </ul>
 
             <li class="nav-item">
+            <a href="{{ url('inventory') }}" class="nav-link">
+            <i class="nav-icon fas fa-table"></i>
+              <p>
+                Inventory
+              </p>
+            </a>
+          </li>
+
+            <li class="nav-item">
             <a href="{{ url('reports') }}" class="nav-link">
-            <i class="nav-icon fas fa-book"></i>
+            <i class="nav-icon fas fa-copy"></i>
               <p>
                 Reports
               </p>
