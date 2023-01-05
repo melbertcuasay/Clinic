@@ -2,10 +2,14 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\User;
+use App\Models\Records;
 use App\Models\Appointments;
 use Illuminate\Http\Request;
+use App\Models\MedicalRecords;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
+use App\Models\Products;
 use Illuminate\Support\Facades\Auth;
 
 class DashboardController extends Controller
@@ -36,7 +40,12 @@ class DashboardController extends Controller
             }
             else
             {
-                return view ('admin.dashboard');
+                $totalAppointment = Appointments::count();
+                $totalRecords = MedicalRecords::count();
+                $totalUsers = User::count();
+                $totalProducts = Products::count();
+                return view ('admin.dashboard', compact('totalAppointment', 'totalRecords', 'totalUsers',
+                'totalProducts'));
             }
         }
         else 
