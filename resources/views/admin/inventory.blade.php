@@ -34,7 +34,7 @@
                 <br>
 
                 <a href="{{ url('stocks') }}" class="btn btn-info" style="font-weight: bold; text-transform: uppercase; float: right;">
-                    Add Stocks
+                <i class="fas fa-plus"></i> Stocks
                 </a>
                 
                 <br>

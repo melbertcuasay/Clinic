@@ -28,13 +28,13 @@
             <div class="col-md-12">
                 <div class="shadow bg-white p-3">
                 <h4 style="font-size: 30px; font-weight: bold; text-transform: uppercase;">Patient Details
-                <a href="{{ url('addpatientdetails') }}" class="btn btn-info" style="float: right;">Add Patient Details</a>
+                <a href="{{ url('addpatientdetails') }}" class="btn btn-info" style="float: right;"><i class="fas fa-plus"></i> Patient Details</a>
                 </h4>
                 <hr>
                 <br>
 
                 <div class="table-responsive">
-                    <table id="myDataTable" class="table table-bordered table-striped">
+                    <table id="myDataTable" class="table">
 
                     <thead>
                         <tr>

@@ -24,6 +24,7 @@ use App\Http\Controllers\User\AppointmentController;
 Route::get('/',[App\Http\Controllers\User\HomeController::class, 'home']);
 Route::get('admin/dashboard',[App\Http\Controllers\Admin\DashboardController::class, 'dashboard']);
 
+
 // appointment route
 Route::post('appointment',[App\Http\Controllers\User\AppointmentController::class, 'appointment']);
 Route::get('bookappointment',[App\Http\Controllers\User\AppointmentController::class, 'bookappointment']);

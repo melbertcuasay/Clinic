@@ -27,7 +27,7 @@
             <div class="col-md-12">
                 <div class="shadow bg-white p-3">
                 <h4 style="font-size: 30px; font-weight: bold; text-transform: uppercase;">Medical Records
-                <a href="{{ url('addmedicalrecords') }}" class="btn btn-info" style="float: right;"> Add Medical Records</a>
+                <a href="{{ url('addmedicalrecords') }}" class="btn btn-info" style="float: right;"><i class="fas fa-plus"></i> Medical Records</a>
                 </h4>
                 <hr>
                 <br>

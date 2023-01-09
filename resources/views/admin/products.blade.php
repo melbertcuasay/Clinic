@@ -28,7 +28,7 @@
             <div class="col-md-12">
                 <div class="shadow bg-white p-3">
                 <h4 style="font-size: 30px; font-weight: bold; text-transform: uppercase;">Products
-                <a href="{{ url('addproducts') }}" class="btn btn-info" style="float: right;">Add Products</a>
+                <a href="{{ url('addproducts') }}" class="btn btn-info" style="float: right;"><i class="fas fa-plus"></i> Products</a>
                 </h4>
                 <hr>
                 <br>
