@@ -23,23 +23,8 @@ class DashboardController extends Controller
         {
             if(Auth::user()->usertype == '0')
             {
-                $user_id = Auth::id();
-
-                if (Appointments::where('patient_id', $user_id)->where('status','In Progress')->exists()) {
-                    $statusbook = '1';
-                }
-                elseif(Appointments::where('patient_id', $user_id)->where('status','Approved')->exists()){
-                    $statusbook = '2';
-                }
-                elseif(Appointments::where('patient_id', $user_id)->where('status','Canceled')->exists()) {
-                    $statusbook = '3';
-                }
-                else {
-                    $statusbook = '4';
-                }
-
                 $products = DB::table('products')->get();
-                return view ('user.homepage', compact('statusbook', 'products'));
+                return view ('user.homepage', compact('products'));
             }
             else
             {
