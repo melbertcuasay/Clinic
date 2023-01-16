@@ -1,4 +1,3 @@
-@if($statusbook == '4')
 <section class="book-form" id="book-form">
             <div class="heading">
                 <span> GET IN TOUCH </span>
