@@ -22,6 +22,8 @@ use App\Http\Controllers\User\AppointmentController;
 */
 
 Route::get('/',[App\Http\Controllers\User\HomeController::class, 'home']);
+Route::get('myappointment',[App\Http\Controllers\User\HomeController::class, 'myappointment']);
+Route::get('cancel/{id}',[App\Http\Controllers\User\HomeController::class, 'cancel']);
 Route::get('admin/dashboard',[App\Http\Controllers\Admin\DashboardController::class, 'dashboard']);
 
 
